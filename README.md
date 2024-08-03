@@ -1,16 +1,32 @@
-# todo_app
+# Flutter Todo List Application
 
-A new Flutter project.
+## _Overview_
 
-## Getting Started
+The Todo List application is developed using Flutter with flutter_riverpod for state management and sqflite for local storage. The application allows users to manage their tasks with CRUD operations and ensures data persistence.
 
-This project is a starting point for a Flutter application.
+## _Getting Started_
 
-A few resources to get you started if this is your first Flutter project:
+Clone the repository
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```sh
+git@github.com:LDNSirikumara/todo_app.git
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+flutter pub get
+flutter run
+```
+
+## _State Management Approach_
+
+The application uses flutter_riverpod for state management. This allows for a more modular and scalable approach to managing state in Flutter applications. Providers are used to manage the state of the todo list and ensure that the UI updates efficiently in response to user actions.
+
+## _CRUD Operations_
+
+Create: You can click on the Plus button.
+
+Read: You can view on the home page; also, by clicking on the home page date, you can filter tasks.
+
+Update: You can update tasks completed/not completed states by clicking on the checkbox.
+
+Delete: You can delete task by hoding a task.
