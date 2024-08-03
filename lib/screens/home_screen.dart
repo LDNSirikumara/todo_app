@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+import 'package:todo_app/config/config.dart';
+import 'package:todo_app/data/data.dart';
 import 'package:todo_app/utils/utils.dart';
 import 'package:todo_app/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
+  static HomeScreen builder(BuildContext context, GoRouterState state) => const HomeScreen();
   const HomeScreen({super.key});
 
   @override
@@ -49,7 +53,48 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const DisplayListOfTasks(
-                      tasks: [],
+                      tasks: [
+                        Task(
+                          title: 'title',
+                          note: '',
+                          time: '03:00',
+                          date: 'Aug, 03',
+                          isCompleted: true,
+                          category: TaskCategories.education,
+                        ),
+                        Task(
+                          title: 'title 2 title 2 title 2 title 2',
+                          note: '',
+                          time: '03:00',
+                          date: 'Aug, 03',
+                          isCompleted: false,
+                          category: TaskCategories.education,
+                        ),
+                        Task(
+                          title: 'title 3 title 3 title 3 title 3 ',
+                          note: 'note',
+                          time: '03:00',
+                          date: 'Aug, 03',
+                          isCompleted: false,
+                          category: TaskCategories.education,
+                        ),
+                        Task(
+                          title: 'title 2 title 2 title 2 title 2',
+                          note: 'note',
+                          time: '03:00',
+                          date: 'Aug, 03',
+                          isCompleted: false,
+                          category: TaskCategories.education,
+                        ),
+                        Task(
+                          title: 'title 3 title 3 title 3 title 3 ',
+                          note: 'note',
+                          time: '03:00',
+                          date: 'Aug, 03',
+                          isCompleted: false,
+                          category: TaskCategories.education,
+                        ),
+                      ],
                     ),
                     const Gap(20),
                     Text(
@@ -59,7 +104,24 @@ class HomeScreen extends StatelessWidget {
                     const Gap(20),
                     const DisplayListOfTasks(
                       isCompletedTasks: true,
-                      tasks: [],
+                      tasks: [
+                        Task(
+                          title: 'title 2 title 2 title 2 title 2',
+                          note: 'note',
+                          time: '03:00',
+                          date: 'Aug, 03',
+                          isCompleted: false,
+                          category: TaskCategories.education,
+                        ),
+                        Task(
+                          title: 'title 3 title 3 title 3 title 3 ',
+                          note: 'note',
+                          time: '03:00',
+                          date: 'Aug, 03',
+                          isCompleted: false,
+                          category: TaskCategories.education,
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -70,7 +132,7 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: colors.primary,
-        onPressed: () {},
+        onPressed: () => context.push(RouteLocation.createTask),
         child: const Icon(Icons.add),
       ),
     );
