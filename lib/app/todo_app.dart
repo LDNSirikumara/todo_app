@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/screens/home_screen.dart';
+import 'package:todo_app/config/config.dart';
+import 'package:todo_app/screens/screens.dart';
 
 class TodoApp extends StatelessWidget {
   const TodoApp({super.key});
@@ -9,12 +10,7 @@ class TodoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-        ),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.light,
       home: const HomeScreen(),
     );
   }
