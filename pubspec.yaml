@@ -1,0 +1,44 @@
+name: todo_app
+description: 'Todo App using SQLite and Riverpod'
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+  # equality comparisons
+  equatable: ^2.0.5
+  # theme and color scheme
+  flex_color_scheme: ^7.3.1
+  # state management
+  flutter_riverpod: ^2.5.1
+  # icons
+  font_awesome_flutter: ^10.7.0
+  # adding spacing between other widgets
+  gap: ^3.0.1
+  # routing
+  go_router: ^14.2.2
+  # Google Fonts
+  google_fonts: ^6.2.1
+  # localization facilities
+  intl: ^0.19.0
+  # manipulating file system paths
+  path: ^1.9.0
+  # database operations
+  sqflite: ^2.3.3+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
